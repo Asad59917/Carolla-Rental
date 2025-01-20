@@ -25,28 +25,42 @@
         </form>
     </div>
     <script>
-document.getElementById('login-form').addEventListener('submit', async (event) => {
+// Add an event listener to the login form for the 'submit' event
+    document.getElementById('login-form').addEventListener('submit', async (event) => {
+// Prevent the default form submission behavior (which reloads the page)
     event.preventDefault();
+
+// Get the values entered in the email and password fields
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
     try {
+// Send a POST request to the server with the email and password
         const response = await fetch('/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
+            method: 'POST', // Use the POST method for sending data
+            headers: { 'Content-Type': 'application/json' }, // Specify the data format as JSON
+            body: JSON.stringify({ email, password }) // Convert the email and password to a JSON string
         });
 
+// Convert the server's response into a JavaScript object
         const data = await response.json();
+
+// Check if the server responded with a successful status
         if (response.ok) {
-            // Store a flag in sessionStorage when login is successful
+// Save a flag in the browser's sessionStorage to remember the login state
             sessionStorage.setItem('isLoggedIn', 'true');
+
+// Show a success message to the user
             alert('Login successful!');
+
+// Redirect the user to the homepage
             window.location.href = '/index.html';
         } else {
+// Show an error message if the login failed (e.g., wrong password)
             alert(`Login failed: ${data.message}`);
         }
     } catch (error) {
+// Show an error message if something went wrong during the login process
         alert('An error occurred while logging in.');
     }
 });
