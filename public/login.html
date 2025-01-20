@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolla Rental Login</title>
+    <link rel="stylesheet" href="Login&signup.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="particles"></div>
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <input type="email" id="login-email" placeholder="Enter your email" required>
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p style="text-align: center; margin-top: 15px; font-size: 14px;">
+                Don't have an account? 
+                <a href="/signup.html" style="color: #1a1a1a; text-decoration: none; font-weight: bold;">
+                    Sign up
+                </a>
+            </p>
+        </form>
+    </div>
+    <script>
+document.getElementById('login-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            // Store a flag in sessionStorage when login is successful
+            sessionStorage.setItem('isLoggedIn', 'true');
+            alert('Login successful!');
+            window.location.href = '/index.html';
+        } else {
+            alert(`Login failed: ${data.message}`);
+        }
+    } catch (error) {
+        alert('An error occurred while logging in.');
+    }
+});
+    </script>
+</body>
+</html>

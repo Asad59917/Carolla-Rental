@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Assignment 2 | Carolla Rental</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navheader">
+          <div class="navlogo">
+            <a href="#" class="logo">
+              <img src="assets/logo-white.png" alt="logo" class="logo-white" />
+              <img src="assets/logo-dark.png" alt="logo" class="logo-dark" />
+              <span>Carolla Rental </span>
+            </a>
+          </div>
+          <div class="navmenuButn" id="menu-Butn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="navlinks" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#Offers">Offers</a></li>
+          <li><a href="#Why-us">Why us?</a></li>
+          <li><a href="#Review">Reviews</a></li>
+        </ul>
+        <body>
+          <div class="navButns">
+            <button class="Butn" id="authButton">
+                <a id="authLink" href="login.html">Login</a>
+            </button>
+          </div>
+      </nav>
+      <div class="headercontainer" id="home">
+        <div class="headerimage">
+          <img src="assets/MainCar.png" alt="header" />
+        </div>
+        <div class="headercontent">
+          <h1>Affordable, Reliable, Unforgettable Rides</h1>
+          <p class="sectiondescription">
+            "At Carolla Rental, we believe in making your journeys comfortable and hassle-free. Whether it's a business trip, a family vacation, or a quick city ride, we've got you covered with top-notch vehicles and exceptional service."
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="SearchForm">
+      <form action="/">
+        <div class="inputGrp">
+          <label for="location">Pick up & Return location</label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="UAE, Dubai"
+          />
+        </div>
+        <div class="inputGrp">
+          <label for="start">Pick up date</label>
+          <input
+            type="text"
+            name="start"
+            id="start"
+            placeholder="Jan 20, 10:00 AM"
+          />
+        </div>
+        <div class="inputGrp">
+          <label for="stop">Return date</label>
+          <input
+            type="text"
+            name="stop"
+            id="stop"
+            placeholder="Feb 18, 10:00 PM"
+          />
+        </div>
+        <button class="Butn">Search <i class="ri-search-line"></i></button>
+      </form>
+    </section>
+
+    <section class="sectioncontainer aboutcontainer" id="about">
+      <h2 class="HeaderSection">How it work</h2>
+      <p class="sectiondescription">
+        Browse and select a vehicle from our fleet,
+        Reserve your car with easy booking process,
+        Collect your car and enjoy.
+      </p>
+      <div class="aboutgrid">
+        <div class="aboutcard">
+          <span><i class="ri-map-pin-2-fill"></i></span>
+          <h4>Why-us Location</h4>
+          <p>
+            Visit your chosen pickup location or opt for doorstep delivery (if available). Our team will ensure your vehicle is ready to go.
+          </p>
+        </div>
+        <div class="aboutcard">
+          <span><i class="ri-calendar-event-fill"></i></span>
+          <h4>Pick-up Date</h4>
+          <p>
+            Choose the date you want to pick the car, ensuring that the car is ready for pick-up.
+          </p>
+        </div>
+        <div class="aboutcard">
+          <span><i class="ri-roadster-fill"></i></span>
+          <h4>Book your Car</h4>
+          <p>
+            Complete your reservasion with few clicks and leave everything on us we will prepare your vehicle for pick-up.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Offers" id="Offers">
+      <div class="sectioncontainer Offerscontainer">
+        <h2 class="HeaderSection">Most popular car rental Offers</h2>
+        <p class="sectiondescription">
+          "Discover our top car rental Offers – unbeatable rates on customer favorites, ready to make your journey unforgettable."
+        </p>
+        <div class="Offerstabs">
+          <button class="Butn active" data-id="Tesla">Tesla</button>
+          <button class="Butn" data-id="Mitsubishi">Mitsubishi</button>
+          <button class="Butn" data-id="Mazda">Mazda</button>
+          <button class="Butn" data-id="Toyota">Toyota</button>
+          <button class="Butn" data-id="Honda">Honda</button>
+        </div>
+        <div id="Tesla" class="tabcontent active">
+          <div class="Offerscard">
+            <img src="assets/deals-1.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(550)</span>
+            </div>
+            <h4>Tesla Model S</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Autopilot
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 400km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Electric
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>980<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-2.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(450)</span>
+            </div>
+            <h4>Tesla Model E</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Autopilot
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 400km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Electric
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>750<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-3.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(550)</span>
+            </div>
+            <h4>Tesla Model Y</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Autopilot
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 400km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Electric
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>800<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Mitsubishi" class="tabcontent">
+          <div class="Offerscard">
+            <img src="assets/deals-4.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(350)</span>
+            </div>
+            <h4>Mirage</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>220<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-5.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(250)</span>
+            </div>
+            <h4>Xpander</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>450<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-6.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(150)</span>
+            </div>
+            <h4>Pajero Sports</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>580<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Mazda" class="tabcontent">
+          <div class="Offerscard">
+            <img src="assets/deals-7.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(200)</span>
+            </div>
+            <h4>Mazda CX5</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>140<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-8.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(100)</span>
+            </div>
+            <h4>Mazda CX-30</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>210<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-9.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(180)</span>
+            </div>
+            <h4>Mazda CX-9</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>200<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Toyota" class="tabcontent">
+          <div class="Offerscard">
+            <img src="assets/deals-10.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(250)</span>
+            </div>
+            <h4>Corolla</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>280<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-11.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(550)</span>
+            </div>
+            <h4>Innova</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>350<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-12.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(180)</span>
+            </div>
+            <h4>Fortuner</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>490<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Honda" class="tabcontent">
+          <div class="Offerscard">
+            <img src="assets/deals-13.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(200)</span>
+            </div>
+            <h4>Amaze</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>130<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-14.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(350)</span>
+            </div>
+            <h4>Elevate</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>220<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="Offerscard">
+            <img src="assets/deals-15.png" alt="Offers" />
+            <div class="Offersrating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(300)</span>
+            </div>
+            <h4>City</h4>
+            <div class="Offerscardgrid">
+              <div>
+                <span><i class="ri-Grp-line"></i></span> 4 People
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Manual
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 18km/l
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="Offerscardfooter">
+              <h3>350<span>/Per Day</span></h3>
+              <a href="#">
+                Rent Now
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Why-uscontainer" id="Why-us">
+      <div class="Why-usimage">
+        <img src="assets/Lambo.png" alt="Why-us" />
+      </div>
+      <div class="Why-uscontent">
+        <h2 class="HeaderSection">Why us</h2>
+        <p class="sectiondescription">
+          At Carolla Rental, we are dedicated to making your car rental experience seamless, affordable, and enjoyable. Here’s why thousands of customers trust us for their journeys
+        </p>
+        <div class="Why-usgrid">
+          <div class="Why-uscard">
+            <span><i class="ri-map-pin-line"></i></span>
+            <div>
+              <h4>Many Locations</h4>
+              <p>
+                Enjoy the convenience of numerous pick-up and drop-off points, making your travel plans smoother and more flexible.
+              </p>
+            </div>
+          </div>
+          <div class="Why-uscard">
+            <span><i class="ri-customer-service-line"></i></span>
+            <div>
+              <h4>Customer Support</h4>
+              <p>Our friendly support team is here to help you 24/7, ensuring a hassle-free experience every step of the way.</p>
+            </div>
+          </div>
+          <div class="Why-uscard">
+            <span><i class="ri-user-star-line"></i></span>
+            <div>
+              <h4>Experience Driver</h4>
+              <p>Need a driver? We provide reliable, professional chauffeurs to enhance your journey.</p>
+            </div>
+          </div>
+          <div class="Why-uscard">
+            <span><i class="ri-wallet-line"></i></span>
+            <div>
+              <h4>Affordable Pricing</h4>
+              <p>Get the best deals with transparent pricing and great value on every rental, tailored to fit your budget.
+              </p>
+            </div>
+          </div>
+          <div class="Why-uscard">
+            <span><i class="ri-calendar-close-line"></i></span>
+            <div>
+              <h4>Flexible Cancellations</h4>
+              <p>Plans changed? No problem! Benefit from free cancellations and flexible booking options.</p>
+            </div>
+          </div>
+          <div class="Why-uscard">
+            <span><i class="ri-verified-badge-line"></i></span>
+            <div>
+              <h4>Trusted Brands</h4>
+              <p>Choose from a fleet of vehicles from top-rated, well-maintained brands you know and trust.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribecontainer">
+      <div class="subscribeimage">
+        <img src="assets/porsche1.png" alt="subscribe" />
+      </div>
+      <div class="subscribecontent">
+        <h2 class="HeaderSection">
+          Subscribe to Stay Updated!
+        </h2>
+        <p class="sectiondescription">
+          Join our newsletter to receive exclusive discounts, the latest car rental deals, and travel tips straight to your inbox. Don’t miss out on special offers—subscribe today and make the most of your journeys.
+        </p>
+        <form action="/">
+          <input type="text" placeholder="Your Email" />
+          <button class="Butn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="sectioncontainer Reviewcontainer" id="Review">
+      <h2 class="HeaderSection">What people say about us?</h2>
+      <p class="sectiondescription">
+        Hear from Our Happy Customers – Discover Why They Choose Carolla Rental!
+      </p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="Reviewcard">
+              <div class="Reviewdetails">
+                <img src="assets/Review-1.jpg" alt="Review" />
+                <div>
+                  <h4>Sophia Alex</h4>
+                  <div class="Reviewrating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-line"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                I had an amazing experience renting a car from this service. The
+                booking process was quick and easy, and the car was in perfect
+                condition. Highly recommend!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Reviewcard">
+              <div class="Reviewdetails">
+                <img src="assets/Review-2.jpg" alt="Review" />
+                <div>
+                  <h4>Jhon Doe</h4>
+                  <div class="Reviewrating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-line"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Customer support was excellent! They helped me with all my
+                questions, and I felt confident about my booking. I will
+                definitely rent from them again.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Reviewcard">
+              <div class="Reviewdetails">
+                <img src="assets/Review-3.jpg" alt="Review" />
+                <div>
+                  <h4>Emma Mark</h4>
+                  <div class="Reviewrating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-line"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Affordable prices and great selection of vehicles! I found
+                exactly what I needed, and the pick-up and drop-off process was
+                seamless. Very happy with my rental.
+              </p>
+            </div>
+          </div>
+    </section>
+    <footer class="footer">
+      <div class="sectioncontainer footercontainer">
+        <div class="footercol">
+          <div class="footerlogo">
+            <a href="#" class="logo">
+              <img src="assets/logo-white.png" alt="logo" />
+              <span>Carolla Rental</span>
+            </a>
+          </div>
+          <p>
+            Carolla Rental is your trusted partner for reliable and affordable car rentals. We strive to make every journey smooth and enjoyable with a wide range of vehicles and exceptional customer service.
+          </p>
+          <ul class="footersocials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footercol">
+          <h4>Quick Links</h4>
+          <ul class="footerlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#Offers">Offers</a></li>
+            <li><a href="#Why-us">Why us?</a></li>
+            <li><a href="#Review">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footercol">
+          <h4>Vehicle Model</h4>
+          <ul class="footerlinks">
+            <li><a href="#"></a></li>
+            <li><a href="#">Nissan</a></li>
+            <li><a href="#">Toyota</a></li>
+            <li><a href="#">Mercedes</a></li>
+            <li><a href="#">BMW</a></li>
+          </ul>
+        </div>
+        <div class="footercol">
+          <h4>Contact</h4>
+          <ul class="footerlinks">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +971-055-9366599
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-fill"></i></span> U.A.E, Dubai
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-mail-fill"></i></span> info@CarollaRental
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerbar">
+        Copyright © 2024 Asad Metaverseage. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // Function to update the button
+    function updateAuthButton() {
+    const authButton = document.getElementById('authButton');
+    const authLink = document.getElementById('authLink');
+    
+    // Check if user is logged in
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+    
+    if (isLoggedIn) {
+        authLink.textContent = 'Logout';
+        authLink.href = '#';
+        authLink.onclick = function(e) {
+            e.preventDefault();
+            // Handle logout
+            sessionStorage.removeItem('isLoggedIn');
+            fetch('/logout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            }).then(() => {
+                window.location.href = 'index.html';
+            });
+        };
+    } else {
+        authLink.textContent = 'Login';
+        authLink.href = 'login.html';
+    }
+}
+
+// Run when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateAuthButton();
+});
+    </script>
+  </body>
+</html>

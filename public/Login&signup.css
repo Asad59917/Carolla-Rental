@@ -1,0 +1,277 @@
+/*Login form*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enhanced Background Design */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.07) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 2px, transparent 2px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    animation: backgroundMove 20s linear infinite;
+    transform-origin: center;
+}
+
+/* Floating Particles */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.particles::before,
+.particles::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at center, #1a1a1a 1px, transparent 1px),
+        radial-gradient(circle at center, #1a1a1a 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    animation: particleFloat 15s linear infinite;
+    opacity: 0.3;
+}
+
+.particles::after {
+    animation-delay: -7.5s;
+    opacity: 0.05;
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+}
+
+/* Login Form Styles */
+#login-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: formFloat 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+#login-form h2 {
+    color: #1a1a1a;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: #f8f9fa;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#login-form button:hover {
+    background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #login-form {
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    #login-form h2 {
+        font-size: 20px;
+    }
+}
+
+/*SIGN UP*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.07) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 2px, transparent 2px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    animation: backgroundMove 20s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
+    }
+}
+
+#signup-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+#signup-form h2 {
+    color: #1a1a1a;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#signup-form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: #f8f9fa;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+#signup-form input:focus {
+    outline: none;
+    border-color: #1a1a1a;
+    background: #ffffff;
+}
+
+#signup-form button {
+    width: 100%;
+    padding: 15px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#signup-form button:hover {
+    background: #333;
+}
+
+#signup-form p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#signup-form p a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#signup-form p a:hover {
+    color: #333;
+}
+
+@media (max-width: 480px) {
+    #signup-form {
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    #signup-form h2 {
+        font-size: 20px;
+    }
+}
