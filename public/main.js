@@ -5,8 +5,10 @@ const menuButnIcon = menuButn.querySelector("i");
 
 // Add a click event listener to the menu button
 menuButn.addEventListener("click", (e) => {
+  // Toggle the 'open' class on the navigation links
   navLinks.classList.toggle("open");
 
+  // Check if the navigation menu is open and update the icon accordingly
   const isOpen = navLinks.classList.contains("open");
   menuButnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
